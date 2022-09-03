@@ -1,0 +1,22 @@
+{
+  "name": "hm-lang-light",
+  "version": "0.1.9",
+  "description": "Fast, lightweight parsers for Hindley-Milner type system expressions",
+  "main": "index.js",
+  "scripts": {
+    "test-basic": "node -r esm test/initial-tests.js",
+    "test-sanctuary": "node -r esm test/sanctuary-tests.js",
+    "test-fantasy-land": "node -r esm test/fantasy-land-tests.js",
+    "test": "node -r esm test/test.js"
+  },
+  "author": "leosbotelho",
+  "license": "MIT",
+  "repository": "github:leosbotelho/hm-lang-light",
+  "dependencies": {
+    "parsimmon": "^1.12.0"
+  },
+  "devDependencies": {
+    "tape": "^4.9.1",
+    "esm": "^3.0.84"
+  }
+}

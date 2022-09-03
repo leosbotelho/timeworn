@@ -1,0 +1,27 @@
+name:                blood-transfusion
+version:             0.1.0.0
+
+copyright:           2019 leosbotelho
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:
+    README.md
+    LICENSE.md
+
+library
+  hs-source-dirs:      src
+  ghc-options:         -Wall -Wcompat -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns -Wredundant-constraints
+                       -Wpartial-fields
+  default-language:    Haskell2010
+  exposed-modules:     BloodTransfusion
+  build-depends:       base >= 4.7 && < 5
+                     , higgledy
+                     , barbies
+                     , refined
+                     , containers
+                     , validation
+                     , prettyprinter
+                     , tagged
+                     , text
+                     , constraints

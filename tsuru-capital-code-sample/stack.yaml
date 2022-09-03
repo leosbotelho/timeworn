@@ -1,0 +1,13 @@
+resolver: lts-14.14
+
+packages:
+- .
+
+extra-deps:
+ - refined-0.4.4
+ - pcap-0.4.5.2
+ - pcap-conduit-0.1
+
+system-ghc: true
+nix:
+  packages: [libpcap, zlib]

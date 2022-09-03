@@ -1,0 +1,57 @@
+ec prompt rgb:000000
+ec swi rgb:000000
+
+ec b0x00 rgb:000000
+ec b0x7f rgb:808080
+ec b0xff rgb:808080
+ec btext rgb:000000
+ec other rgb:000000
+
+ec push rgb:000000
+ec pop rgb:000000
+
+ec bin rgb:000000
+ec math rgb:000000
+ec mov rgb:000000
+ec call rgb:000000
+ec cjmp rgb:000000
+ec jmp rgb:000000
+ec cmp rgb:000000
+ec ret rgb:000000
+ec nop rgb:000000
+
+ec reg rgb:000000
+ec creg rgb:000000
+
+ec num rgb:000000
+ec fline rgb:000000
+ec fname rgb:000000
+ec flow rgb:000000
+ec flow2 rgb:000000
+ec label rgb:8a8a8a
+ec offset rgb:000000
+ec trap rgb:8a8a8a
+ec flag rgb:000000
+ec args rgb:8a8a8a
+ec invalid rgb:000000
+ec help rgb:8a8a8a
+
+ec input rgb:000000
+ec comment rgb:808080
+ec usrcmt rgb:000000
+
+ec ai.read rgb:000000
+ec ai.write rgb:000000
+ec ai.exec rgb:000000
+ec ai.seq rgb:000000
+ec ai.ascii rgb:8a8a8a
+
+ec graph.true rgb:8a8a8a
+ec graph.trufae rgb:8a8a8a
+ec graph.false rgb:000000
+ec graph.current rgb:000000
+ec graph.traced rgb:000000
+ec graph.box rgb:000000
+ec graph.box2 rgb:000000
+ec graph.box3 rgb:000000
+ec graph.box4 rgb:000000

@@ -1,0 +1,61 @@
+{ pkgs, ... }:
+
+{
+  imports = [
+    ./base.nix
+  ];
+
+  environment.systemPackages = with pkgs; [
+    nix-prefetch
+    cachix
+    srm
+    killall
+    watch
+    time
+    entr
+    sshfs
+    unison
+    unrar
+    unzip
+    p7zip
+    atool
+    restic
+    renameutils
+    iftop
+    iperf
+    dnsperf
+    iotop
+    mtr
+    traceroute
+    nmap
+    lsof
+    neofetch
+    sqlite-interactive
+    pv
+    multitail
+    pass
+    apg
+    gnupg
+    mkpasswd
+    git-secret
+    paperkey
+    lftp
+    openssh
+    gnumake
+    valgrind
+    imgcat
+    tree
+    diffstat
+    diffutils
+    patchutils
+    tokei
+    xsv
+    jq
+    pup
+    xmlstarlet
+    openssl
+    cacert
+    tcpdump
+    dos2unix
+  ];
+}

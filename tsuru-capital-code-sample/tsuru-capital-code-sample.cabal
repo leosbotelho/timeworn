@@ -1,0 +1,75 @@
+cabal-version:       2.2
+name:                tsuru-capital-code-sample
+version:             0.1.0.0
+
+copyright:           2019 leosbotelho
+build-type:          Simple
+extra-source-files:
+    README.md
+    LICENSE.md
+
+common ghc-options
+  ghc-options:         -O2
+                       -Wall -Werror -Wcompat -Wincomplete-record-updates
+                       -Wincomplete-uni-patterns -Wredundant-constraints
+                       -Wpartial-fields
+common deps
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , vinyl
+                     , mtl
+                     , singletons
+                     , lens
+                     , tagged
+                     , refined
+                     , safe-money
+                     , time
+                     , country
+                     , text
+                     , bytestring
+                     , conduit
+                     , pcap
+                     , pcap-conduit
+                     , attoparsec
+                     , optparse-applicative
+                     , sort
+                     , prettyprinter
+                     , QuickCheck
+                     , filepath
+
+common deps-with-library
+  import:              deps
+  other-modules:       CodeSample
+                     , MainWithConduit
+
+common bench-deps
+  import:              ghc-options, deps-with-library
+  build-depends:       criterion
+                     , deepseq
+
+library
+  import:              ghc-options, deps
+  exposed-modules:     CodeSample
+                     , MainWithConduit
+  hs-source-dirs:      src
+
+executable quotes-summary
+  import:              ghc-options, deps-with-library
+  hs-source-dirs:      src
+  main-is:             Main.hs
+  other-modules:       CodeSample
+                     , MainWithConduit
+
+executable quotes-summary-bench
+  import:              ghc-options, bench-deps
+  hs-source-dirs:      src
+  main-is:             Bench.hs
+
+Test-Suite quotes-summary-test
+  import:              ghc-options, deps-with-library
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      src
+  main-is:             Test.hs
+  build-depends:       tasty
+                     , tasty-quickcheck
+                     , tasty-hunit

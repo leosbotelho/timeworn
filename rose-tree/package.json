@@ -1,0 +1,19 @@
+{
+  "name": "rose-tree",
+  "version": "0.0.1",
+  "description": "Haskell inspired, Fantasy Land -compliant rose tree with Sanctuary",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -r esm test/fantasy-land-laws-tests.js"
+  },
+  "author": "leosbotelho",
+  "license": "MIT",
+  "dependencies": {
+    "sanctuary": "^0.15.0"
+  },
+  "devDependencies": {
+    "fantasy-laws": "^1.1.0",
+    "tape": "^4.9.1",
+    "esm": "^3.0.84"
+  }
+}

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+profile="$AUTORANDR_CURRENT_PROFILE"
+
+output="analog-stereo"
+
+if [[ "$profile" == "hdmi-mirror" || "$profile" == "hdmi-only" ]]
+then
+  output="hdmi-stereo"
+fi
+
+pactl set-card-profile 0 "output:$output+input:analog-stereo"

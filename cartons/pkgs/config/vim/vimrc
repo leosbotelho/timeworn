@@ -1,0 +1,65 @@
+" Ergonomics
+" https://konfekt.github.io/blog/2016/10/03/get-the-leader-right ack
+
+nnoremap : ,
+xnoremap : ,
+onoremap : ,
+
+nnoremap , :
+xnoremap , :
+onoremap , :
+
+nnoremap g: g,
+nnoremap g, <NOP>
+
+nnoremap @, @:
+nnoremap @: <NOP>
+
+" NOTE: Causes lag when 'q' is hit, for example when
+" - stopping to record a macro or
+" - exiting a buffer by a custom mapping to 'q'.
+nnoremap q, q:
+xnoremap q, q:
+
+nnoremap q: <NOP>
+xnoremap q: <NOP>
+
+" Comprehensive
+filetype on
+filetype plugin indent on
+
+let g:better_whitespace_enabled=1
+let g:better_whitespace_ctermcolor='1'
+
+command -range=% Sw <line1>,<line2>StripWhitespace
+command -range=% SW <line1>,<line2>Sw
+
+command -range=% Bhs <line1>,<line2>!brittany
+command -range=% Shs <line1>,<line2>!stylish-haskell
+command -range=% BHS <line1>,<line2>Bhs
+command -range=% SHS <line1>,<line2>Shs
+
+set background=light
+
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+set nosmartindent nocindent noautoindent
+
+let loaded_matchparen = 1
+
+nnoremap <silent> <c-p> :Files<cr>
+
+nnoremap <silent> <leader>re :RangerEdit<cr>
+nnoremap <silent> <leader>rv :RangerVSplit<cr>
+nnoremap <silent> <leader>rs :RangerSplit<cr>
+nnoremap <silent> <leader>rt :RangerTab<cr>
+nnoremap <silent> <leader>ri :RangerInsert<cr>
+nnoremap <silent> <leader>ra :RangerAppend<cr>
+nnoremap <silent> <leader>rc :RangerCD<cr>
+nnoremap <silent> <leader>rl :RangerLCD<cr>
+
+nnoremap Q :qa!<cr>
+
+" hide fzf statusline
+autocmd! FileType fzf
+autocmd  FileType fzf set laststatus=0 noshowmode noruler
+  \| autocmd BufLeave <buffer> set laststatus=2 showmode ruler

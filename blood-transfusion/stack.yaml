@@ -1,0 +1,12 @@
+resolver: lts-14.3
+
+packages:
+- .
+
+
+extra-deps:
+  - higgledy-0.3.0.0
+  - barbies-1.1.3.0
+  - refined-0.4.2.2
+  - constraints-0.10.1
+  - QuickCheck-2.12.6.1

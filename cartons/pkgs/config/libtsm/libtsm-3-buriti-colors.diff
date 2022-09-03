@@ -1,0 +1,44 @@
+diff -up -r libtsm-3/src/tsm_vte.c libtsm-3-personal/src/tsm_vte.c
+--- libtsm-3/src/tsm_vte.c	2013-10-23 12:27:43.697000000 -0200
++++ libtsm-3-personal/src/tsm_vte.c	2019-10-27 12:22:47.635970474 -0300
+@@ -207,24 +207,24 @@ enum vte_color {
+ 
+ static uint8_t color_palette[COLOR_NUM][3] = {
+ 	[COLOR_BLACK]         = {   0,   0,   0 }, /* black */
+-	[COLOR_RED]           = { 205,   0,   0 }, /* red */
+-	[COLOR_GREEN]         = {   0, 205,   0 }, /* green */
+-	[COLOR_YELLOW]        = { 205, 205,   0 }, /* yellow */
+-	[COLOR_BLUE]          = {   0,   0, 238 }, /* blue */
+-	[COLOR_MAGENTA]       = { 205,   0, 205 }, /* magenta */
+-	[COLOR_CYAN]          = {   0, 205, 205 }, /* cyan */
+-	[COLOR_LIGHT_GREY]    = { 229, 229, 229 }, /* light grey */
+-	[COLOR_DARK_GREY]     = { 127, 127, 127 }, /* dark grey */
+-	[COLOR_LIGHT_RED]     = { 255,   0,   0 }, /* light red */
+-	[COLOR_LIGHT_GREEN]   = {   0, 255,   0 }, /* light green */
+-	[COLOR_LIGHT_YELLOW]  = { 255, 255,   0 }, /* light yellow */
+-	[COLOR_LIGHT_BLUE]    = {  92,  92, 255 }, /* light blue */
+-	[COLOR_LIGHT_MAGENTA] = { 255,   0, 255 }, /* light magenta */
+-	[COLOR_LIGHT_CYAN]    = {   0, 255, 255 }, /* light cyan */
++	[COLOR_RED]           = { 158,  24,  40 }, /* red */
++	[COLOR_GREEN]         = {   0, 136,   0 }, /* green */
++	[COLOR_YELLOW]        = { 150, 138,  56 }, /* yellow */
++	[COLOR_BLUE]          = {  65,  65, 113 }, /* blue */
++	[COLOR_MAGENTA]       = { 150,  60,  89 }, /* magenta */
++	[COLOR_CYAN]          = {  65, 129, 121 }, /* cyan */
++	[COLOR_LIGHT_GREY]    = { 190, 190, 190 }, /* light grey */
++	[COLOR_DARK_GREY]     = { 102, 102, 102 }, /* dark grey */
++	[COLOR_LIGHT_RED]     = { 207,  97, 113 }, /* light red */
++	[COLOR_LIGHT_GREEN]   = { 124, 188, 140 }, /* light green */
++	[COLOR_LIGHT_YELLOW]  = { 255, 247, 150 }, /* light yellow */
++	[COLOR_LIGHT_BLUE]    = {  65, 134, 190 }, /* light blue */
++	[COLOR_LIGHT_MAGENTA] = { 207, 158, 190 }, /* light magenta */
++	[COLOR_LIGHT_CYAN]    = { 113, 190, 190 }, /* light cyan */
+ 	[COLOR_WHITE]         = { 255, 255, 255 }, /* white */
+ 
+-	[COLOR_FOREGROUND]    = { 229, 229, 229 }, /* light grey */
+-	[COLOR_BACKGROUND]    = {   0,   0,   0 }, /* black */
++	[COLOR_FOREGROUND]    = { 38,  38,  38  }, /* light grey */
++	[COLOR_BACKGROUND]    = { 217, 217, 217 }, /* black */
+ };
+ 
+ static uint8_t color_palette_solarized[COLOR_NUM][3] = {
